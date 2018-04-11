@@ -4,10 +4,12 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { VisitPage } from '../pages/visit/visit';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login'
+import { CommentPage } from '../pages/comment/comment';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/registration/registration';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -15,9 +17,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
+    VisitPage,
     HomePage,
+    CommentPage,
     LoginPage,
+    RegisterPage,
     TabsPage
   ],
   imports: [
@@ -28,9 +32,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
+    VisitPage,
     HomePage,
+    CommentPage,
     LoginPage,
+    RegisterPage,
     TabsPage
   ],
   providers: [

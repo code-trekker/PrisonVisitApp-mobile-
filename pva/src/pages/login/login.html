@@ -6,7 +6,7 @@
     
       <ion-item class="login-input">
         <ion-label floating><ion-icon name="contact"></ion-icon> Username</ion-label>
-        <ion-input [(ngModel)]="username" name="usnername" type="text" value=""></ion-input>
+        <ion-input [(ngModel)]="username" name="username" type="text" value=""></ion-input>
       </ion-item>
     
       <ion-item class="login-input">
@@ -15,9 +15,9 @@
       </ion-item>   
     
     <br><br><div>
-      <button ion-button block (click)="login()" color="dark">Sign In</button>
+      <button ion-button block round (click)="login()" color="dark">Sign In</button>
       <p style="text-align: center; "><i>Don't have an account?</i></p>
-      <button ion-button block (click)="signup()" color="dark">Sign Up</button>
+      <button ion-button block round (click)="signup()" color="dark">Sign Up</button>
     </div>
   </form>
 </ion-content>
