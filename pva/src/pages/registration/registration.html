@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Registration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="signup" padding>
+  <h2 padding>Create an account!</h2>
+    <form>
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="contact"></ion-icon> Username</ion-label>
+            <ion-input [(ngModel)]="username" name="username" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="lock"></ion-icon> Password</ion-label>
+            <ion-input [(ngModel)]="password" name="password" type="password" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="person"></ion-icon> First Name</ion-label>
+            <ion-input [(ngModel)]="firstname" name="firstname" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="person"></ion-icon> Middle Name</ion-label>
+            <ion-input [(ngModel)]="middlename" name="middlename" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="person"></ion-icon> Last Name</ion-label>
+            <ion-input [(ngModel)]="lastname" name="lastname" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="calendar"></ion-icon> Birthday</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="birthday" id="birthday" name="birthday"></ion-datetime>
+        </ion-item>
+
+        <ion-item class="signup-input"> 
+            <ion-label><ion-icon name="body"></ion-icon> Age</ion-label>
+            <ion-select [(ngModel)]="age" name="age" value="">
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>
+              <ion-option value="5">5</ion-option>
+              <ion-option value="6">6</ion-option>
+              <ion-option value="7">7</ion-option>
+              <ion-option value="8">8</ion-option>
+              <ion-option value="9">9</ion-option>
+              <ion-option value="10">10</ion-option>
+              <ion-option value="11">11</ion-option>
+              <ion-option value="12">12</ion-option>
+              <ion-option value="13">13</ion-option>
+              <ion-option value="14">14</ion-option>
+              <ion-option value="15">15</ion-option>
+              <ion-option value="16">16</ion-option>
+              <ion-option value="17">17</ion-option>
+              <ion-option value="18">18</ion-option>
+              <ion-option value="19">19</ion-option>
+              <ion-option value="20">20</ion-option>
+              <ion-option value="21">21</ion-option>
+              <ion-option value="22">22</ion-option>
+              <ion-option value="23">23</ion-option>
+              <ion-option value="24">24</ion-option>
+              <ion-option value="25">25</ion-option>
+              <ion-option value="26">26</ion-option>
+              <ion-option value="27">27</ion-option>
+              <ion-option value="28">28</ion-option>
+              <ion-option value="29">29</ion-option>
+              <ion-option value="30">30</ion-option>
+              <ion-option value="31">31</ion-option>
+              <ion-option value="32">32</ion-option>
+              <ion-option value="33">33</ion-option>
+              <ion-option value="34">34</ion-option>
+              <ion-option value="35">35</ion-option>
+              <ion-option value="36">36</ion-option>
+              <ion-option value="37">37</ion-option>
+              <ion-option value="38">38</ion-option>
+              <ion-option value="39">39</ion-option>
+              <ion-option value="40">40</ion-option>
+              <ion-option value="51">51</ion-option>
+              <ion-option value="52">52</ion-option>
+              <ion-option value="53">53</ion-option>
+              <ion-option value="54">54</ion-option>
+              <ion-option value="55">55</ion-option>
+              <ion-option value="56">56</ion-option>
+              <ion-option value="57">57</ion-option>
+              <ion-option value="58">58</ion-option>
+              <ion-option value="59">59</ion-option>
+              <ion-option value="60">60</ion-option>
+              <ion-option value="61">61</ion-option>
+              <ion-option value="62">62</ion-option>
+              <ion-option value="63">63</ion-option>
+              <ion-option value="64">64</ion-option>
+              <ion-option value="65">65</ion-option>
+              <ion-option value="66">66</ion-option>
+              <ion-option value="67">67</ion-option>
+              <ion-option value="68">68</ion-option>
+              <ion-option value="69">69</ion-option>
+              <ion-option value="70">70</ion-option>
+              <ion-option value="71">71</ion-option>
+              <ion-option value="72">72</ion-option>
+              <ion-option value="73">73</ion-option>
+              <ion-option value="74">74</ion-option>
+              <ion-option value="75">75</ion-option>
+              <ion-option value="76">76</ion-option>
+              <ion-option value="77">77</ion-option>
+              <ion-option value="78">78</ion-option>
+              <ion-option value="79">79</ion-option>
+              <ion-option value="80">80</ion-option>
+              <ion-option value="81">81</ion-option>
+              <ion-option value="82">82</ion-option>
+              <ion-option value="83">83</ion-option>
+              <ion-option value="84">84</ion-option>
+              <ion-option value="85">85</ion-option>
+              <ion-option value="86">86</ion-option>
+              <ion-option value="87">87</ion-option>
+              <ion-option value="88">88</ion-option>
+              <ion-option value="89">89</ion-option>
+              <ion-option value="90">90</ion-option>
+              <ion-option value="91">91</ion-option>
+              <ion-option value="92">92</ion-option>
+              <ion-option value="93">93</ion-option>
+              <ion-option value="94">94</ion-option>
+              <ion-option value="95">95</ion-option>
+              <ion-option value="96">96</ion-option>
+              <ion-option value="97">97</ion-option>
+              <ion-option value="98">98</ion-option>
+              <ion-option value="99">99</ion-option>
+            </ion-select>
+          </ion-item>
+        
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="call"></ion-icon> Contact Number</ion-label>
+            <ion-input [(ngModel)]="contact" name="contact" type="number" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="home"></ion-icon> Address</ion-label>
+            <ion-input [(ngModel)]="address" name="address" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item class="signup-input">
+            <ion-label><ion-icon name="finger-print"></ion-icon> Prisoner's Name</ion-label>
+            <ion-input [(ngModel)]="prisoner" name="prisoner" type="text" value=""></ion-input>
+        </ion-item>
+        <br><br>
+        <div class="reg-buttons">
+            <button ion-button round (click)="submit()" type="submit" color="dark">Submit</button> 
+            <button ion-button round (click)="backlog()" color="dark">Go Back</button>
+        </div>
+    </form>
+</ion-content>
