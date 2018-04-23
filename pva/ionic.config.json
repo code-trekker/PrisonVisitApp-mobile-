@@ -1,0 +1,8 @@
+{
+  "name": "pva",
+  "app_id": "a4b35a5d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
