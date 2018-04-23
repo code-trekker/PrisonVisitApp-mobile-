@@ -1,0 +1,32 @@
+page-registration{
+    .signup, .signup-input{
+        background-color: #fcec5f;      
+    }
+
+    .labels{
+        color: black;
+    }
+    h2{
+        text-align: center;
+        font-weight: 100;
+    }
+    
+    .reg-buttons{
+        padding: 15px 50px 5px;
+    }
+
+    .alertCustomCss{
+        background-color: black;
+        color: white;
+        button{
+            color: #fcec5f;
+        }
+    }
+    ion-label{
+        color: black;
+    }
+  
+}
+
+
+

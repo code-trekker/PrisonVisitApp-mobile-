@@ -1,0 +1,14 @@
+
+
+<ion-menu [content]="sidebar">
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item (click)="logout()"><ion-icon name='exit'></ion-icon> Logout</button>
+
+        <button menuClose ion-item (click)="about()"><ion-icon name='information-circle'> About</ion-icon></button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  
+  <ion-nav #sidebar [root]="rootPage"></ion-nav>  
