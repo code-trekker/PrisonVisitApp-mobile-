@@ -13,6 +13,7 @@ import { CommentPage } from '../pages/comment/comment';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/registration/registration';
 import { InfoPage } from '../pages/information/information';
+import { AnnouncementsContent } from '../pages/announcements/announcements';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ExpandableComponent } from '../components/expandable/expandable';
@@ -20,6 +21,7 @@ import { HttpModule } from '@angular/http';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HttpClientModule } from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterPage,
     TabsPage,
     InfoPage,
+    AnnouncementsContent,
     ExpandableComponent
   ],
   imports: [
@@ -40,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgxDatatableModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
+    DataTablesModule,
     SuperTabsModule.forRoot(),
     IonicStorageModule.forRoot({
       name: '__mydb',
@@ -57,6 +61,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterPage,
     TabsPage,
     InfoPage,
+    AnnouncementsContent,
     ExpandableComponent
   ],
   providers: [

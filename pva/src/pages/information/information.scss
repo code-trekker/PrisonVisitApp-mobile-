@@ -1,3 +1,17 @@
-information {
-
+page-information {
+    .about-list {
+        h3 {
+            font-size: 20px;
+            display: inline;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 25px;
+            display: inline
+        }
+        ion-icon {
+            font-size: 20px; //Preferred size here
+        }
+    }
 }
+

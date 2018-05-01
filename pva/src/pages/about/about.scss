@@ -14,7 +14,7 @@ page-about{
         
     }
     .section {
-        background: transparent;
+        background: rgba(0,0,0,0);
         color: #000;
         margin-bottom: 0px;
     }
@@ -24,12 +24,12 @@ page-about{
     }
  
     .child {
-        background: transparent;
+        background: rgba(0,0,0,0);
         color: #000;
         margin-bottom: -10px;
     }
     .child-item {
-        background: transparent;
+        background: rgba(0,0,0,0);
         padding: 15px;
     }
     .label {

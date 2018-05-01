@@ -19,4 +19,10 @@
     background-color: #fcec5f;
 }
 
+.custom-modal {
+    .divider {
+        border-style: solid 3px black;
+    }
+}
+
 @import "../theme/icons"

@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { CommentPage } from '../pages/comment/comment';
+import { HomePage } from '../pages/home/home';
+import { InfoPage } from '../pages/information/information';
 
 
 
@@ -15,7 +17,7 @@ import { CommentPage } from '../pages/comment/comment';
 export class MyApp {
     @ViewChild('sidebar') nav: NavController
 
-    rootPage: any = LoginPage;
+    rootPage: any = TabsPage;//LoginPage;
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private alerts: AlertController) {
         platform.ready().then(() => {
@@ -40,4 +42,9 @@ export class MyApp {
         alert.present();
         this.nav.setRoot(LoginPage);
     }
+
+    about() {
+        this.nav.push(InfoPage)
+    }
+
 }

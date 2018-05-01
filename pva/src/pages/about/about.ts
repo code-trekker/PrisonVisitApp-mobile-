@@ -19,6 +19,7 @@ export class AboutPage {
 		})
 	}
 
+
 	toggleSection(i) {
 		this.information[i].open = !this.information[i].open;
 	}

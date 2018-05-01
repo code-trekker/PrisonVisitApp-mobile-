@@ -119,6 +119,14 @@ $alert-md-message-font-size: 20px;
 $alert-md-message-text-color: #fcec5f;
 $alert-md-border-radius: 3px;
 
+$card-ios-background-color: #fcec5f;
+$card-md-background-color: #fcec5f;
+
+$modal-md-background-color: #fcec5f;
+
+
+
+
 @font-face {
   font-family: 'Saira Extra Condensed';
   font-style: normal;
@@ -159,5 +167,8 @@ h1, h2 {
     font-family: "Saira Extra Condensed" !important;
     font-weight: 700 !important;
 }
+
+
+
 
 

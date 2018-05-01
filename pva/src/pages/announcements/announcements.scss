@@ -1,0 +1,27 @@
+page-announcements {
+    .title{
+        font-size: 33px;
+    }
+    .date {
+        font-size: 20px;
+        margin-top: -22px;
+    }
+    .content {
+        font-size: 30px;
+    }
+
+    .memes {
+        padding: 50px;
+        .divider {
+            margin-top: 80px;
+            border-style: solid; 
+            border-color: #fcec5f; 
+            border-radius: 5px;
+            min-height: 500px;
+        }
+    }
+
+}
+
+
+

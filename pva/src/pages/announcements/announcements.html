@@ -1,0 +1,19 @@
+<ion-toolbar color="dark" padding>
+    <ion-title>Content</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="dismiss()">
+            <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content padding class="memes">
+
+    <div class="divider" style="">
+        <h2 padding text-wrap class="title">Title: {{title}}</h2>
+        <h2 padding-left padding-right padding-bottom text-wrap class="date">Posted on: {{date}}</h2>
+        <h3 padding-left padding-right text-wrap class="content">{{content}}</h3>
+    </div>
+
+</ion-content>

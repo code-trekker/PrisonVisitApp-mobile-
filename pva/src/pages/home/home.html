@@ -1,17 +1,20 @@
+<ion-content class="getstart">
+    <br><br>
+    <h1 padding-top text-center center style="font-size: 45px; margin-bottom: -7px;">Announcements</h1>
+
+    <ion-list>
+        <ion-item class="getend">
+            <ion-card class="list" *ngFor="let item of information" text-wrap>
+                <ion-card-header text-wrap>
+                    <h2>{{item.title}}</h2>
+                </ion-card-header>
+                <ion-card-content style="margin-top: -20px; margin-bottom: -25px;">
+                    Date posted: {{item.date}}
+                </ion-card-content>
+                <button ion-button clear end style="float: right;" (click)="showDetails(item.title, item.date, item.content)">View</button>
+            </ion-card>
+        </ion-item>
+    </ion-list>
 
 
-<ion-content padding text-center center>
-  <br>
-  <h1 padding style="font-size: 45px;">Announcements</h1>
-
-  <ion-row>
-      <ion-col>
-        <strong><h3>Title</h3></strong>
-      </ion-col>
-      <ion-col>
-        <strong><h3>Date</h3></strong>
-      </ion-col>
-  </ion-row>
-    
 </ion-content>
-
