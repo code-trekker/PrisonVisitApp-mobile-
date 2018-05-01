@@ -1,20 +1,63 @@
-<ion-header>
-  <ion-navbar color="dark">
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-      </button>
-    <ion-title>
-      Visit
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Schedule a visit</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+  <br><br>
+  <h1 text-center padding style="font-size: 50px;">Schedule A Visit</h1>
+
+  <h2 text-wrap style="padding-left: 25px; font-size: 22px;">Prisoner Name: {{prisoner}}</h2>
+  <form text-center style="padding: 10px;">
+   
+    <ion-item no-lines class="scheduleVisit">
+      <ion-label>Date of Visit</ion-label>
+      <ion-input [(ngModel)]="date" name="date" type="date" value=""></ion-input>
     </ion-item>
-  </ion-list>
+
+    <ion-item no-lines class="scheduleVisit">
+      <ion-label>Relationship to Inmate</ion-label>
+      <ion-select [(ngModel)]="relation" name="relation" value="">
+        <ion-option value="Spouse">Spouse</ion-option>
+        <ion-option value="Parent">Parent</ion-option>
+        <ion-option value="Child">Child</ion-option>
+        <ion-option value="Sibling">Sibling</ion-option>
+        <ion-option value="Relative">Relative</ion-option>
+        <ion-option value="Friend">Friend</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item no-lines class="scheduleVisit">
+      <ion-label>Number of Visitors</ion-label>
+      <ion-select [(ngModel)]="count" name="count" value="">
+        <ion-option value="1">1 (Alone)</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item no-lines class="scheduleVisit">
+        <ion-label>Time</ion-label>
+        <ion-select [(ngModel)]="time" name="time" value="">
+          <ion-option value="8:00 AM">8:00 AM</ion-option>
+          <ion-option value="8:30 AM">8:30 AM</ion-option>
+          <ion-option value="9:00 AM">9:00 AM</ion-option>
+          <ion-option value="9:30 AM">9:30 AM</ion-option>
+          <ion-option value="10:00 AM">10:00 AM</ion-option>
+          <ion-option value="10:30 AM">10:30 AM</ion-option>
+          <ion-option value="11:00 AM">11:00 AM</ion-option>
+          <ion-option value="11:30 AM">11:30 AM</ion-option>
+          <ion-option value="12:00 PM">12:00 PM</ion-option>
+          <ion-option value="12:30 PM">12:30 PM</ion-option>
+          <ion-option value="1:00 PM">1:00 PM</ion-option>
+          <ion-option value="1:30 PM">1:30 PM</ion-option>
+          <ion-option value="2:00 PM">2:00 PM</ion-option>
+          <ion-option value="2:30 PM">2:30 PM</ion-option>
+          <ion-option value="3:00 PM">3:00 PM</ion-option>
+          <ion-option value="3:30 PM">3:30 PM</ion-option>
+          <ion-option value="4:00 PM">4:00 PM</ion-option>
+          <ion-option value="4:30 PM">4:30 PM</ion-option>
+          <ion-option value="5:00 PM">5:00 PM</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <br><button ion-button style="width: 20rem; border-radius: 10px;" class="scheduleVisit" (click)="schedule()" color="dark">Submit</button>
+  </form>
 </ion-content>

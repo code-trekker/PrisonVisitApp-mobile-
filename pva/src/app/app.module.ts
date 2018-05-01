@@ -12,8 +12,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CommentPage } from '../pages/comment/comment';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/registration/registration';
+import { InfoPage } from '../pages/information/information';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ExpandableComponent } from '../components/expandable/expandable';
+import { HttpModule } from '@angular/http';
+import { SuperTabsModule } from 'ionic2-super-tabs';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +30,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CommentPage,
     LoginPage,
     RegisterPage,
-    TabsPage
+    TabsPage,
+    InfoPage,
+    ExpandableComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    NgxDatatableModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
+    SuperTabsModule.forRoot(),
     IonicStorageModule.forRoot({
       name: '__mydb',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
@@ -43,13 +55,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CommentPage,
     LoginPage,
     RegisterPage,
-    TabsPage
+    TabsPage,
+    InfoPage,
+    ExpandableComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HTTP,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule {}

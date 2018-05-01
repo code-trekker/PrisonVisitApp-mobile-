@@ -1,3 +1,46 @@
-page-about {
+page-about{
+    .accordion-list {
+        background: transparent;
+        height: 100%;
+        p {
+            font-size: 16px;
+        }
 
+        h3 {
+            display: inline;
+            font-size: 20px;
+        }
+
+        
+    }
+    .section {
+        background: transparent;
+        color: #000;
+        margin-bottom: 0px;
+    }
+    .section-active {
+        background: #ffc400;
+        color: #fff;
+    }
+ 
+    .child {
+        background: transparent;
+        color: #000;
+        margin-bottom: -10px;
+    }
+    .child-item {
+        background: transparent;
+        padding: 15px;
+    }
+    .label {
+        margin: 0px;
+    }
+    .list {
+        margin-bottom: 0px;
+    }
+
+}
+
+h1{
+    font-size: 38px;
 }

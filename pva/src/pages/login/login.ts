@@ -16,17 +16,17 @@ declare let cordova: any;
     templateUrl: 'login.html'
 })
 
+
+
 @Injectable()
 export class LoginPage {
 
     username: string = '';
     password: string = '';
 
-    constructor(public navCtrl: NavController,
-        private alerts: AlertController,
-        private http: HTTP,
-        private store: Storage,
-    ) { }
+    constructor(public navCtrl: NavController, private alerts: AlertController, private http: HTTP, private store: Storage) { 
+        
+    }
 
 
 
@@ -44,11 +44,10 @@ export class LoginPage {
 
         let alert = this.alerts.create({ //creates alert 
             title: 'Error',
-            subTitle: 'Username/password is invalid!',
+            message: 'Username/password is invalid!',
             cssClass: 'alertCustomCss',
             buttons: ['Dismiss']
         })
-
 
 
         cordova.plugin.http.sendRequest('http://127.0.0.1:5000/api/login/', options, response => {
@@ -59,6 +58,7 @@ export class LoginPage {
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('public_id', response.data.public_id);
                 localStorage.setItem('role_id', response.data.role_id);
+                localStorage.setItem('prisoner', response.data.prisoner);
 
                 this.navCtrl.setRoot(TabsPage, {}, { animate: true, animation: 'md-transition', direction: 'forward' });
 
@@ -70,8 +70,7 @@ export class LoginPage {
             console.log('403');
             alert.present();
 
-        }
-        );
+        });
     }
 
     signup() {

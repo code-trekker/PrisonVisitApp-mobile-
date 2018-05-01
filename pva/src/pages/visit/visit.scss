@@ -1,3 +1,25 @@
-page-contact {
-
+page-visit {
+    .scheduleVisit {
+        font-size: 25px;
+    }
 }
+
+.md {
+    .alertCustomCss {
+    > div {
+        background: #373c42;
+        color: #fcec5f;
+    }  
+
+    button {
+        color: #fcec5f !important;
+    }
+
+    title {
+        font-weight: bold;
+    }
+
+    
+  }
+}
+

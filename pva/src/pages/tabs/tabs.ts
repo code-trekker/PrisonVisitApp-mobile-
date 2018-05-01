@@ -6,17 +6,34 @@ import { HomePage } from '../home/home';
 import { VisitPage } from '../visit/visit';
 import { CommentPage } from '../comment/comment';
 
+import { NavController } from 'ionic-angular';
+
+
 @Component({
-  templateUrl: 'tabs.html'
+    templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = VisitPage;
-  tab4Root = CommentPage;
+    title: string;
 
-  constructor() {
+    constructor(public navCtrl: NavController) {
 
-  }
+
+    }
+    ngAfterViewInit() {
+
+        // must wait for AfterViewInit if you want to modify the tabs instantly
+        this.title = 'Home';
+
+    }
+
+    tab1Root = HomePage;
+    tab2Root = AboutPage;
+    tab3Root = VisitPage;
+    tab4Root = CommentPage;
+
+    onTabSelect(ev: any) {
+        //console.log('Tab selected', 'Index: ' + ev.index, 'Unique ID: ' + ev.id);
+        this.title = ev.id;
+    }
 }

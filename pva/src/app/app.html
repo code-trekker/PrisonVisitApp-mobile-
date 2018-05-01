@@ -1,11 +1,24 @@
 
-
 <ion-menu [content]="sidebar">
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item (click)="logout()"><ion-icon name='exit'></ion-icon> Logout</button>
 
-        <button menuClose ion-item (click)="about()"><ion-icon name='information-circle'> About</ion-icon></button>
+    <ion-header>
+        <ion-toolbar  color="dark">
+          <ion-title text-center>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+    <ion-content class="menucontent">
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="menuButtons" center>
+                <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="logout()"><ion-icon item-start name='icon-ai-logout' style="font-size: 30px;"></ion-icon>Logout</button>
+                <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="about()"><ion-icon item-start name='icon-ai-about' style="font-size: 30px;"></ion-icon> About</button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-list>
     </ion-content>
   </ion-menu>

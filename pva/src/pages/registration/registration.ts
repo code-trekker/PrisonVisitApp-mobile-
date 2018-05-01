@@ -35,17 +35,10 @@ export class RegisterPage {
 
     register() {
 
-        // const options = {
-        //     method: 'post',
-        //     contentType: 'application/json; charset=utf-8',
-        //     data: JSON.stringify({ username: this.username, password: this.password, firstname: this.firstname, middlename: this.middlename, lastname: this.lastname, birthday: this.birthday, age: this.age, contact: this.contact, address: this.address, prisoner: this.prisoner }),
-        //     dataType: "json",
-        //     crossDomain: true,
-        // };
-
+       
         let reg_succ = this.alertCtrl.create({ //creates alert 
             title: 'Success',
-            subTitle: 'Registered successfully!',
+            message: 'Registered successfully!',
             cssClass: 'alertCustomCss',
             buttons: ['OK']
         })
@@ -55,7 +48,8 @@ export class RegisterPage {
 
         let alert = this.alertCtrl.create({
             title: 'Confirm registration',
-            message: 'Do you wish to proceed?',
+            message: 'Are you sure?',
+            cssClass: 'alertCustomCss',
             buttons: [
                 {
                     text: 'Cancel',

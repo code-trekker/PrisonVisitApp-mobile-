@@ -14,19 +14,27 @@ page-registration{
     .reg-buttons{
         padding: 15px 50px 5px;
     }
-
-    .alertCustomCss{
-        background-color: black;
-        color: white;
-        button{
-            color: #fcec5f;
-        }
-    }
-    ion-label{
-        color: black;
-    }
   
 }
+
+.md {
+    .alertCustomCss {
+    > div {
+        background: #373c42;
+        color: #fcec5f;
+    }  
+
+    button {
+        color: #fcec5f !important;
+    }  
+
+    title {
+        font-weight: bold;
+    }
+    
+  }
+}
+
 
 
 

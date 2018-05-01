@@ -1,0 +1,229 @@
+{
+    "items": [
+        {
+            "name": "FAQs",
+            "children":[
+                {
+                    "name": "When can I schedule a visit?",
+                    "icon1": "icon-ai-schedule",
+                    "children":[
+                        {
+                            "information": "Visitation service is available from 8:00 AM - 5:00 PM, Monday to Friday without noon break."
+                        }
+                    ]
+                },
+                {
+                    "name": "Who can avail the service?",
+                    "icon1": "icon-ai-people",
+                    "children":[
+                        {
+                            "information": "Spouse, parents, children, siblings, relatives or friends of the inmate are qualified to avail the service."
+                        }
+                    ]
+                },
+                {
+                    "name": "What are the requirements?",
+                    "icon1": "icon-ai-validid",
+                    "children":[
+                        {
+                            "information": "Valid Identification Card or Community Tax Certificate is required for identity verification."
+                        }
+                    ]
+                },
+                {
+                    "name": "How long can I visit?",
+                    "icon1": "icon-ai-ontime",
+                    "children":[
+                        {
+                            "information": "Duration of each visit should take 25 - 30 minutes ONLY."
+                        }
+                    ]
+                },
+                {
+                    "name": "Do I need to pay to visit?",
+                    "icon1": "icon-ai-free",
+                    "children":[
+                        {
+                            "information": "This service is FREE OF CHARGE, so no payment/fee is required."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Visiting Guidelines",
+            "children":[
+                {
+                    "name": "Are children allowed to visit?",
+                    "icon1": "icon-ai-children",
+                    "children":[
+                        {
+                            "information": "Children under 13 years of age can ONLY enter the BJMP premises during the scheduled Family day of the inmates."
+                        }
+                    ]
+                },
+                {
+                    "name": "Who can visit during Family Day?",
+                    "icon1": "icon-ai-family",
+                    "children":[
+                        {
+                            "information": "During Family Day, ONLY the immediate family members are allowed to enter the BJMP premises (max. of 3 persons)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Do I really need to bring a valid ID?",
+                    "icon1": "icon-ai-identification",
+                    "children":[
+                        {
+                            "information": "When visiting an inmate, always bring a valid form of ID (ex. license, passport, etc.). This can help prove the legitimacy of your relationship to the inmate you want to visit."
+                        }
+                    ]
+                },
+                {
+                    "name": "For your convenience!",
+                    "icon1": "icon-ai-satisfied",
+                    "children":[
+                        {
+                            "information": "Please follow all the rules and regulations to have a hassle-free and convenient visitation experience. Thank you!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Not Allowed Inside",
+            "children": [
+                {
+                    "name": "Electronic Devices",
+                    "icon1": "icon-ai-devices",
+                    "children": [
+                        {
+                            "information": "All forms of electronic devices/gadgets are not allowed inside the BJMP premises."
+                        }
+                    ]
+                },
+                {
+                    "name": "Firearms and Explosives",
+                    "icon1": "icon-ai-firearms1",
+                    "icon2": "icon-ai-firearms2",
+                    "children": [
+                        {
+                            "information": "Bringing of pistols/automatic rifles/explosives is not allowed inside the visiting area."
+                        }
+                    ]
+                },
+                {
+                    "name": "Sharp Weapons",
+                    "icon1": "icon-ai-sharpweapons",
+                    "children": [
+                        {
+                            "information": "Knives, Swiss knives, ice picks, scissors and other sharp weapons cannot be brought inside the visiting area."
+                        }
+                    ]
+                },
+                {
+                    "name": "Breakable Objects",
+                    "icon1": "icon-ai-breakables",
+                    "children":[
+                        {
+                            "information": "All things that are breakable and stainless, bottled colognes/perfumes with sprayhead and pressurized colognes/perfumes are not allowed inside."
+                        }
+                    ]
+                },
+                {
+                    "name": "Illegal Drugs",
+                    "icon1": "icon-ai-drugs",
+                    "children":[
+                        {
+                            "information": "Known illegal drugs (ex. marijuana, heroin, cocaine, etc.) are prohibited and cannot be brought inside. Cigars, cigarettes and other tobacco products are also not allowed."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Prohibited Clothing",
+            "children": [
+                {
+                    "name": "Orange/Yellow/Camouflage Clothes",
+                    "icon1": "icon-ai-clothes",
+                    "children":[
+                        {
+                            "information": "Orange or yellow clothing (shirts, shorts, jackets, etc.) cannot be worn by visitors inside the visiting area. Also camouflage-patterned clothes are not allowed."
+                        }
+                    ]
+                },
+                {
+                    "name": "Revealing Clothes",
+                    "icon1": "icon-ai-revealing1",
+                    "icon2": "icon-ai-revealing2",
+                    "children": [
+                        {
+                            "information": "For females: sleeveless tops, excessively short shorts/skirts, spaghetti tops, halters and crop tops cannot be worn while visiting. For males: revealing shirts, sleeveless shirts and excessively short shorts cannot be worn."
+                        }
+                    ]
+                },
+                {
+                    "name": "Jackets",
+                    "icon1": "icon-ai-jacket",
+                    "children": [
+                        {
+                            "information": "Leather jackets, hoodies, and other types of jackets cannot be worn while inside."
+                        }
+                    ]
+                },
+                {
+                    "name": "Headwear",
+                    "icon1": "icon-ai-caps",
+                    "children":[
+                        {
+                            "information": "All types of caps and bonnets/beanies are not allowed to be worn while visiting. Shades are also prohibited."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Prohibited Food/Drinks",
+            "children":[
+                {
+                    "name": "Canned goods",
+                    "icon1": "icon-ai-canned",
+                    "children":[
+                        {
+                            "information": "Any kind of canned product (sardines, tuna, corned beef, etc.) is not allowed to be brought inside the visiting area."
+                        }
+                    ]
+                },
+                {
+                    "name": "Bulad (Dried fish)",
+                    "icon1": "icon-ai-bulad",
+                    "children":[
+                        {
+                            "information": "Bulad is prohibited and not allowed inside the visiting area."
+                        }
+                    ]
+                },
+                {
+                    "name": "Ginamos & Uyap",
+                    "icon1": "icon-ai-jar",
+                    "children":[
+                        {
+                            "information": "These products are prohibited and are not allowed to be brought inside the visiting area."
+                        }
+                    ]
+                },
+                {
+                    "name": "Alcoholic Drinks",
+                    "icon1": "icon-ai-liquor",
+                    "children":[
+                        {
+                            "information": "All forms and types of alcoholic beverage are STRICTLY prohibited and cannot be brought inside the visiting area."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

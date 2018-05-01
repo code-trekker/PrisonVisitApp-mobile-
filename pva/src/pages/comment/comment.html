@@ -1,21 +1,12 @@
-<ion-header>
-    <ion-navbar color="dark">
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-      <ion-title>
-        Comments
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content>
-    <ion-list>
-      <ion-list-header>Comment</ion-list-header>
-      <ion-item>
-        <ion-icon name="ionic" item-start></ion-icon>
-        @ionicframework
-      </ion-item>
-    </ion-list>
-  </ion-content>
-  
+<ion-content center text-center padding>
+    <br>
+    <br>
+    <h1 style="font-size: 45px;">Comments & Suggestions</h1>
+    <h3 padding>Do you have any comments or suggestions? We would love to hear from you!</h3>
+    <textarea rows="5" maxLength="750" id="myStuff" [(ngModel)]="myStuff" placeholder="Tap here to type" wrap="hard" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tap here to type'"></textarea>
+
+    <br>
+    <br>
+    <button ion-button style="width: 20rem; border-radius: 10px;" class="comment" (click)="submitComment()" color="dark" onclick="document.getElementById('myStuff').value = ''">Submit</button>
+
+</ion-content>
