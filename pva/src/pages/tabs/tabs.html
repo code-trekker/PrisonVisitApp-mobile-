@@ -1,6 +1,17 @@
-<ion-tabs color="dark">
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Rules" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Visit" tabIcon="calendar"></ion-tab>
-  <ion-tab [root]="tab4Root" tabTitle="Comments" tabIcon="chatbubbles"></ion-tab>
-</ion-tabs>
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+  
+      <ion-title>{{title}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<super-tabs toolbarBackground="dark" toolbarColor="main" tabsPlacement="bottom" indicatorColor="main" [config]="{ sideMenu: 'left' }" (tabSelect)="onTabSelect($event)">
+  <super-tab [root]="tab1Root" icon="icon-ai-announce" id="Home" (ionSelect)="this.title ='Home'"></super-tab>
+  <super-tab [root]="tab2Root" icon="icon-ai-rules" id="Rules" (ionSelect)="this.title ='Rules'"></super-tab>
+  <super-tab [root]="tab3Root" icon="icon-ai-prison-visit" id="Visit" (ionSelect)="this.title ='Visit'"></super-tab>
+  <super-tab [root]="tab4Root" icon="icon-ai-comments" id="Comment" (ionSelect)="this.title ='Comment'"></super-tab>
+</super-tabs>
