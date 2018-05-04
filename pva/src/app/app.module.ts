@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HTTP } from '@ionic-native/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AboutPage } from '../pages/about/about';
 import { VisitPage } from '../pages/visit/visit';
@@ -24,51 +25,52 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    AboutPage,
-    VisitPage,
-    HomePage,
-    CommentPage,
-    LoginPage,
-    RegisterPage,
-    TabsPage,
-    InfoPage,
-    AnnouncementsContent,
-    ExpandableComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    NgxDatatableModule,
-    IonicModule.forRoot(MyApp),
-    HttpModule,
-    DataTablesModule,
-    SuperTabsModule.forRoot(),
-    IonicStorageModule.forRoot({
-      name: '__mydb',
-        driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    AboutPage,
-    VisitPage,
-    HomePage,
-    CommentPage,
-    LoginPage,
-    RegisterPage,
-    TabsPage,
-    InfoPage,
-    AnnouncementsContent,
-    ExpandableComponent
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    HTTP,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
-  ]
+    declarations: [
+        MyApp,
+        AboutPage,
+        VisitPage,
+        HomePage,
+        CommentPage,
+        LoginPage,
+        RegisterPage,
+        TabsPage,
+        InfoPage,
+        AnnouncementsContent,
+        ExpandableComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        NgxDatatableModule,
+        BrowserAnimationsModule,
+        IonicModule.forRoot(MyApp),
+        HttpModule,
+        DataTablesModule,
+        SuperTabsModule.forRoot(),
+        IonicStorageModule.forRoot({
+            name: '__mydb',
+            driverOrder: ['indexeddb', 'sqlite', 'websql']
+        })
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        AboutPage,
+        VisitPage,
+        HomePage,
+        CommentPage,
+        LoginPage,
+        RegisterPage,
+        TabsPage,
+        InfoPage,
+        AnnouncementsContent,
+        ExpandableComponent
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        HTTP,
+        { provide: ErrorHandler, useClass: IonicErrorHandler }
+    ]
 })
-export class AppModule {}
+export class AppModule { }

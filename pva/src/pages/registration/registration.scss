@@ -1,18 +1,24 @@
 page-registration{
-    .signup, .signup-input{
-        background-color: #fcec5f;      
+    .signup {
+        background-image: url('../assets/imgs/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 340%;
+        background-position: center;       
     }
 
-    .labels{
-        color: black;
+    .signup-input {
+        background: rgba(0,0,0,0.5);
+        border-color: white;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        color: #fcec5f;
+
     }
-    h2{
-        text-align: center;
-        font-weight: 100;
-    }
+
     
     .reg-buttons{
-        padding: 15px 50px 5px;
+        padding: 0;
     }
   
 }

@@ -1,20 +1,32 @@
 <ion-content class="getstart">
-    <br><br>
+    <br>
+    <br>
     <h1 padding-top text-center center style="font-size: 45px; margin-bottom: -7px;">Announcements</h1>
+
+    <!-- <button ion-button (click)="toggleVisible()">Toggle it!</button> -->
 
     <ion-list>
         <ion-item class="getend">
-            <ion-card class="list" *ngFor="let item of information" text-wrap>
+            <ion-card [@flipInX]="flipInX" class="list" *ngFor="let item of information | slice:0:slice;" text-wrap>
                 <ion-card-header text-wrap>
                     <h2>{{item.title}}</h2>
                 </ion-card-header>
-                <ion-card-content style="margin-top: -20px; margin-bottom: -25px;">
+                <ion-card-content style="margin-top: -20px; margin-bottom: -25px; font-size: 16px;">
                     Date posted: {{item.date}}
                 </ion-card-content>
                 <button ion-button clear end style="float: right;" (click)="showDetails(item.title, item.date, item.content)">View</button>
             </ion-card>
         </ion-item>
     </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="circles" distance="1%" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    <ion-fab bottom right>
+        <button ion-fab color="dark">Button</button>
+    </ion-fab>
 
 
 </ion-content>

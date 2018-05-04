@@ -1,6 +1,17 @@
 page-login{
-    .login-page, .login-input{
-        background-color: #fcec5f;
+    .login-page {
+        // background-color: #fcec5f;
+        background-image: url('../assets/imgs/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 340%;
+        background-position: center; 
+    }
+
+    .login-input {
+        background: rgba(0,0,0,0.5);
+        border-color: white;
+        border-radius: 10px;
     }
     
 }

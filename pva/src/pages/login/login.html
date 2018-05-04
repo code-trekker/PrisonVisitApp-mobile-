@@ -1,32 +1,32 @@
 <ion-content padding class="login-page">
-  <br>
-  <div text-center>
-    <img src="assets/imgs/mob.jpg" >
-  </div>
-
-
-  <form fixed>
-
-    <ion-item no-lines class="login-input">
-      <ion-label floating>
-        <ion-icon name="ios-contact"></ion-icon> Username</ion-label>
-      <ion-input [(ngModel)]="username" name="username" type="text" value=""></ion-input>
-    </ion-item>
-
-    <ion-item no-lines class="login-input">
-      <ion-label floating>
-        <ion-icon name="ios-lock"></ion-icon> Password</ion-label>
-      <ion-input [(ngModel)]="password" name="password" type="password" value=""></ion-input>
-    </ion-item>
-
     <br>
-    <br>
-    <div>
-      <button ion-button block round (click)="login()" color="dark">Sign In</button>
-      <p style="text-align: center; ">
-        <i>Don't have an account?</i>
-      </p>
-      <button ion-button block round (click)="signup()" color="dark">Sign Up</button>
+    <div text-center>
+        <img src="assets/imgs/mob.png">
     </div>
-  </form>
+
+
+    <form fixed>
+        <br><br>
+        <ion-item no-lines class="login-input">
+            <ion-label style="color: #fcec5f; font-size: 20px;">
+                <ion-icon name="ios-contact"></ion-icon> Username</ion-label>
+            <ion-input [(ngModel)]="username" name="username" type="text" value="" style="color: #fcec5f"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item no-lines class="login-input">
+            <ion-label style="color: #fcec5f; font-size: 20px;">
+                <ion-icon name="ios-lock"></ion-icon> Password</ion-label>
+            <ion-input [(ngModel)]="password" name="password" type="password" value="" style="color: #fcec5f"></ion-input>
+        </ion-item>
+
+        <br>
+        <br>
+        <div>
+            <button ion-button block round (click)="login()" color="dark">Sign In</button>
+            <p style="text-align: center; color: #fcec5f; ">
+                <i>Don't have an account?</i>
+            </p>
+            <button ion-button block round (click)="signup()" color="dark">Sign Up</button>
+        </div>
+    </form>
 </ion-content>
