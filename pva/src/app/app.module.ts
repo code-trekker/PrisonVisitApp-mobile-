@@ -23,6 +23,7 @@ import { SuperTabsModule } from 'ionic2-super-tabs';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HttpClientModule } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
+import { DataServiceProvider } from '../providers/data-service/data-service';
 
 @NgModule({
     declarations: [
@@ -70,7 +71,8 @@ import { DataTablesModule } from 'angular-datatables';
         StatusBar,
         SplashScreen,
         HTTP,
-        { provide: ErrorHandler, useClass: IonicErrorHandler }
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+    DataServiceProvider
     ]
 })
 export class AppModule { }

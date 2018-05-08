@@ -17,7 +17,7 @@ import { InfoPage } from '../pages/information/information';
 export class MyApp {
     @ViewChild('sidebar') nav: NavController
 
-    rootPage: any = TabsPage;//LoginPage;
+    rootPage: any = LoginPage;
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private alerts: AlertController) {
         platform.ready().then(() => {
