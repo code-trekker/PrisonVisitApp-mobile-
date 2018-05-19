@@ -20,14 +20,21 @@ export class VisitPage {
     relation: string = '';
     prisoner: string = localStorage.getItem('prisoner');
     id: string = localStorage.getItem('public_id');
-
+    accountStat: any;
+    disableButton: boolean;
 
     constructor(public navCtrl: NavController, private alerts: AlertController, private http: HTTP) { }
 
     ngOnInit() {
-
-        // must wait for AfterViewInit if you want to modify the tabs instantly
+        this.accountStat = localStorage.getItem('accountStatus');
+        // console.log(this.accountStat);
         this.prisoner = localStorage.getItem('prisoner');
+
+        if (this.accountStat == 'false') {
+            this.disableButton = true;
+        } else {
+            this.disableButton = null;
+        }
 
     }
 

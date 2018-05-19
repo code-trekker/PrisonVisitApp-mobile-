@@ -1,69 +1,107 @@
 <ion-content class="signup" padding>
     <h1 padding-top text-center style="color: #fcec5f;font-size: 60px;">Register Here</h1>
     <form text-center>
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-contact"></ion-icon> Username</ion-label>
-            <ion-input [(ngModel)]="username" name="username" type="text" value=""></ion-input>
-        </ion-item>
+        <ion-slides>
+            <ion-slide>
+                <br>
+                <div style="background-color: rgba(0,0,0,0.5); border-radius: 10px">
+                    <h1 style="color: #fcec5f; font-size: 45px;">Step 1: Account Info</h1>
+                </div>
+                <br>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-contact"></ion-icon> Username</ion-label>
+                    <ion-input [(ngModel)]="username" name="username" type="text" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-lock"></ion-icon> Password</ion-label>
-            <ion-input [(ngModel)]="password" name="password" type="password" value=""></ion-input>
-        </ion-item>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-lock"></ion-icon> Password</ion-label>
+                    <ion-input [(ngModel)]="password" name="password" type="password" value=""></ion-input>
+                </ion-item>
+                <br>
+                <div class="reg-buttons" text-center>
+                    <button ion-button round (click)="backlog()" color="dark">Go Back</button>
+                    <button ion-button round (click)="goToSlide()" color="dark">Next</button>
+                </div>
+            </ion-slide>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-person"></ion-icon> First Name</ion-label>
-            <ion-input [(ngModel)]="firstname" name="firstname" type="text" value=""></ion-input>
-        </ion-item>
+            <ion-slide>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-person"></ion-icon> Middle Name</ion-label>
-            <ion-input [(ngModel)]="middlename" name="middlename" type="text" value=""></ion-input>
-        </ion-item>
+                <br>
+                <div style="background-color: rgba(0,0,0,0.5); border-radius: 10px">
+                    <h1 style="color: #fcec5f; font-size: 45px;">Step 2: Account Details</h1>
+                </div>
+                <br>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-person"></ion-icon> First Name</ion-label>
+                    <ion-input [(ngModel)]="firstname" name="firstname" type="text" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-person"></ion-icon> Last Name</ion-label>
-            <ion-input [(ngModel)]="lastname" name="lastname" type="text" value=""></ion-input>
-        </ion-item>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-person"></ion-icon> Middle Name</ion-label>
+                    <ion-input [(ngModel)]="middlename" name="middlename" type="text" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="calendar"></ion-icon> Birthday</ion-label>
-            <ion-input [(ngModel)]="birthday" name="birthday" type="date" value=""></ion-input>
-        </ion-item>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-person"></ion-icon> Last Name</ion-label>
+                    <ion-input [(ngModel)]="lastname" name="lastname" type="text" value=""></ion-input>
+                </ion-item>
+                <br>
+                <div class="reg-buttons" text-center>
+                    <button ion-button round (click)="goBack()" color="dark">Go Back</button>
+                    <button ion-button round (click)="goToSlide2()" color="dark">Next</button>
+                </div>
+            </ion-slide>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-body"></ion-icon> Age</ion-label>
-            <ion-input [(ngModel)]="age" name="age" type="number" value=""></ion-input>
-        </ion-item>
+            <ion-slide>
+                    <br>
+                    <div style="background-color: rgba(0,0,0,0.5); border-radius: 10px">
+                        <h1 style="color: #fcec5f; font-size: 45px;">Step 3: Personal Info</h1>
+                    </div>
+                    <br>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="calendar"></ion-icon> Birthday</ion-label>
+                    <ion-input [(ngModel)]="birthday" name="birthday" type="date" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="phone-portrait"></ion-icon> Contact Number</ion-label>
-            <ion-input [(ngModel)]="contact" name="contact" type="number" value=""></ion-input>
-        </ion-item>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-body"></ion-icon> Age</ion-label>
+                    <ion-input [(ngModel)]="age" name="age" type="number" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-home"></ion-icon> Address</ion-label>
-            <ion-input [(ngModel)]="address" name="address" type="text" value=""></ion-input>
-        </ion-item>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="phone-portrait"></ion-icon> Contact Number</ion-label>
+                    <ion-input [(ngModel)]="contact" name="contact" type="number" value=""></ion-input>
+                </ion-item>
 
-        <ion-item no-lines class="signup-input">
-            <ion-label style="color: #fcec5f">
-                <ion-icon name="ios-finger-print"></ion-icon> Prisoner's Name</ion-label>
-            <ion-input [(ngModel)]="prisoner" name="prisoner" type="text" value=""></ion-input>
-        </ion-item>
-        
-        <div class="reg-buttons" text-center>
-            <button ion-button round (click)="register()" color="dark">Submit</button>
-            <button ion-button round (click)="backlog()" color="dark">Go Back</button>
-        </div>
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-home"></ion-icon> Address</ion-label>
+                    <ion-input [(ngModel)]="address" name="address" type="text" value=""></ion-input>
+                </ion-item>
+
+                <ion-item no-lines class="signup-input">
+                    <ion-label style="color: #fcec5f">
+                        <ion-icon name="ios-finger-print"></ion-icon> Prisoner's Name</ion-label>
+                    <ion-input [(ngModel)]="prisoner" name="prisoner" type="text" value=""></ion-input>
+                </ion-item>
+                <br>
+                <div class="reg-buttons" text-center>
+                    <button ion-button round (click)="goBack()" color="dark">Go Back</button>
+                    <button ion-button round (click)="backlog()" color="dark">Cancel</button>
+                    <button ion-button round (click)="register()" color="dark">Submit</button>
+                </div>
+
+            </ion-slide>
+
+
+        </ion-slides>
     </form>
 </ion-content>

@@ -1,27 +1,45 @@
+<div *ngIf="showSplash" class="splash">
+    <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+
 
 <ion-menu [content]="sidebar">
 
     <ion-header>
-        <ion-toolbar  color="dark">
-          <ion-title text-center>Menu</ion-title>
+        <ion-toolbar color="dark">
+            <ion-title text-center>Menu</ion-title>
         </ion-toolbar>
-      </ion-header>
+    </ion-header>
 
     <ion-content class="menucontent">
-      <ion-list>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="menuButtons" center>
-                <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="logout()"><ion-icon item-start name='icon-ai-logout' style="font-size: 30px;"></ion-icon>Logout</button>
-                <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="about()"><ion-icon item-start name='icon-ai-about' style="font-size: 30px;"></ion-icon> About</button>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-list>
+        <ion-list>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <div class="menuButtons" center>
+                            <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="logout()">
+                                <ion-icon item-start name='icon-ai-logout' style="font-size: 30px;"></ion-icon>Logout</button>
+                            <button color="main" menuClose ion-item no-lines style="font-size: 30px;" (click)="about()">
+                                <ion-icon item-start name='icon-ai-about' style="font-size: 30px;"></ion-icon> About</button>
+                            <!-- <h1 ion-item no-lines style="font-size: 30px; background-color: #fcec5f">
+                                <ion-icon item-start name='md-person' style="font-size: 30px;"></ion-icon> Status: {{showStat}}</h1> -->
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-list>
     </ion-content>
-  </ion-menu>
-  
-  
-  <ion-nav #sidebar [root]="rootPage"></ion-nav>  
+</ion-menu>
+
+
+<ion-nav #sidebar [root]="rootPage"></ion-nav>

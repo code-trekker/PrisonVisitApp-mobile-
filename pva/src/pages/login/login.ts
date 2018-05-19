@@ -24,8 +24,8 @@ export class LoginPage {
     username: string = '';
     password: string = '';
 
-    constructor(public navCtrl: NavController, private alerts: AlertController, private http: HTTP, private store: Storage) { 
-        
+    constructor(public navCtrl: NavController, private alerts: AlertController, private http: HTTP, private store: Storage) {
+
     }
 
 
@@ -54,11 +54,12 @@ export class LoginPage {
 
             try {   //onSuccess
                 response.data = JSON.parse(response.data);
-                
+
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('public_id', response.data.public_id);
                 localStorage.setItem('role_id', response.data.role_id);
                 localStorage.setItem('prisoner', response.data.prisoner);
+                localStorage.setItem('accountStatus', response.data.accountStatus);
 
                 this.navCtrl.setRoot(TabsPage, {}, { animate: true, animation: 'md-transition', direction: 'forward' });
 

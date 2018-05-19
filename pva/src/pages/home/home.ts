@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController, ModalController, NavParams, Content, LoadingController } from 'ionic-angular';
+import { NavController, ModalController, NavParams, Content, LoadingController, AlertController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { AnnouncementsContent } from '../announcements/announcements';
 import { trigger, transition, useAnimation } from '@angular/animations';
@@ -39,13 +39,13 @@ export class HomePage {
     colors: string;
     public showButton = false;
     loader: any;
-
-    constructor(public navCtrl: NavController, private http: HttpClient, public modalCtrl: ModalController, public myElement: ElementRef, public loadingCtrl: LoadingController) {
+    accountStat: any;
+    constructor(public navCtrl: NavController, private http: HttpClient, public modalCtrl: ModalController, public myElement: ElementRef, public loadingCtrl: LoadingController, private alerts: AlertController) {
 
     }
 
     // presentLoading() {
-        
+
 
     //     setTimeout(() => {
     //         loader.dismiss();
@@ -69,6 +69,20 @@ export class HomePage {
                 this.datalength = data.announcements.length;
                 this.loader.dismiss();
             });
+
+        this.accountStat = localStorage.getItem('accountStatus');
+
+        let unconfirmed = this.alerts.create({ //creates alert 
+            title: 'Reminder',
+            message: 'This account is still unconfirmed! Some services are disabled until your account is verified. ',
+            cssClass: 'alertCustomCss',
+            buttons: ['OK, got it!']
+        })
+
+        if (this.accountStat == 'false') {
+            unconfirmed.present();
+        }
+        
     }
 
     // loadData() {
@@ -84,7 +98,6 @@ export class HomePage {
     }
 
 
-
     showDetails(title: string, date: string, content: string) {
         console.log('shows details');
         let modal = this.modalCtrl.create(AnnouncementsContent, { modalTitle: title, modalDate: date, modalContent: content }, { cssClass: "custom-modal" });
@@ -92,7 +105,7 @@ export class HomePage {
     }
 
     slice: number = 4;
-    
+
 
     doInfinite(infiniteScroll) {
         setTimeout(() => {

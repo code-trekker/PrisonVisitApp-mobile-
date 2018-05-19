@@ -8,6 +8,8 @@ import { LoginPage } from '../pages/login/login';
 import { CommentPage } from '../pages/comment/comment';
 import { HomePage } from '../pages/home/home';
 import { InfoPage } from '../pages/information/information';
+import { RegisterPage } from '../pages/registration/registration';
+import { timer } from 'rxjs/observable/timer';
 
 
 
@@ -18,6 +20,10 @@ export class MyApp {
     @ViewChild('sidebar') nav: NavController
 
     rootPage: any = LoginPage;
+    // accountStatus: any;
+    // showStat: string;
+
+    showSplash = true;
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private alerts: AlertController) {
         platform.ready().then(() => {
@@ -25,7 +31,28 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
+            
+            timer(3000).subscribe(() => this.showSplash = false)
         });
+    }
+
+    ngOnInit() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('public_id');
+        localStorage.removeItem('role_id');
+        localStorage.removeItem('prisoner');
+        localStorage.removeItem('accountStatus');
+         //clears unnecessary data on init of app
+        // this.accountStatus = localStorage.getItem('accountStatus'); //gets status of account which is important
+        // console.log(this.accountStatus);
+
+        // if (this.accountStatus == 'false') {
+        //     this.showStat = 'False';
+        // } 
+        
+        // if (this.accountStatus == 'true') {
+        //     this.showStat = 'True';
+        // }
     }
 
     logout(): void {
@@ -33,6 +60,8 @@ export class MyApp {
         localStorage.removeItem('public_id');
         localStorage.removeItem('role_id');
         localStorage.removeItem('prisoner');
+        localStorage.removeItem('accountStatus');
+        // localStorage.removeItem('id');
         let alert = this.alerts.create({ //creates alert 
             title: 'Logged out',
             message: 'You have successfully logged out!',

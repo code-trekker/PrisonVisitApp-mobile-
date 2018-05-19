@@ -1,6 +1,5 @@
-import { Component, OnInit, Injectable } from '@angular/core';
-import { AlertController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
+import { Component, OnInit, Injectable, ViewChild } from '@angular/core';
+import { AlertController, NavController, Slides } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login'
 import { HTTP } from '@ionic-native/http';
@@ -17,6 +16,8 @@ declare let cordova: any;
 @Injectable()
 export class RegisterPage {
 
+    @ViewChild(Slides) slides: Slides;
+
     username: string = '';
     password: string = '';
     firstname: string = '';
@@ -28,14 +29,38 @@ export class RegisterPage {
     address: string = '';
     prisoner: string = '';
 
-    constructor(public navCtrl: NavController,
-        private alertCtrl: AlertController,
-        private http: HTTP) { }
+    constructor(public navCtrl: NavController, private alertCtrl: AlertController, private http: HTTP) { 
+        
+    }
+
+    ngOnInit() {
+        this.slides.lockSwipes(true);
+    }
+
+
+    goToSlide() {
+        this.slides.lockSwipes(false);
+        this.slides.slideTo(1, 500);
+        this.slides.lockSwipes(true);
+    }
+
+    goToSlide2() {
+        this.slides.lockSwipes(false);
+        this.slides.slideTo(2, 500);
+        this.slides.lockSwipes(true);
+    }
+
+    goBack() {
+        this.slides.lockSwipes(false);
+        this.slides.slidePrev(500);
+        this.slides.lockSwipes(true);
+    }
+
 
 
     register() {
 
-       
+
         let reg_succ = this.alertCtrl.create({ //creates alert 
             title: 'Success',
             message: 'Registered successfully!',

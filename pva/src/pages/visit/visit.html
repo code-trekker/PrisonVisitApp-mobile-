@@ -4,7 +4,7 @@
   <br><br>
   <h1 text-center padding style="font-size: 50px;">Schedule A Visit</h1>
 
-  <h2 text-wrap style="padding-left: 25mmmggmgg\px; font-size: 22px;">Prisoner Name: {{prisoner}}</h2>
+  <h2 text-wrap style="padding-left: 25px; font-size: 22px;">Prisoner Name: {{prisoner}}</h2>
   <form text-center style="padding: 10px;">
    
     <ion-item no-lines class="scheduleVisit">
@@ -58,6 +58,6 @@
         </ion-select>
       </ion-item>
 
-      <br><button ion-button style="width: 20rem; border-radius: 10px;" class="scheduleVisit" (click)="schedule()" color="dark">Submit</button>
+      <br><button ion-button  style="width: 20rem; border-radius: 10px;" class="scheduleVisit" (click)="schedule()" color="dark" disabled={{disableButton}}>Submit</button>
   </form>
 </ion-content>

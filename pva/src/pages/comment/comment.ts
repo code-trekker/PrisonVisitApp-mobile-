@@ -16,11 +16,22 @@ export class CommentPage {
 
     myStuff: string = '';
     id: string = localStorage.getItem('public_id');
+    accountStat: any;
+    disableButton: boolean;
 
     constructor(public navCtrl: NavController, private alerts: AlertController, private http: HTTP) {
 
     }
 
+    ngOnInit() {
+        this.accountStat = localStorage.getItem('accountStatus');
+        
+        if (this.accountStat == 'false') {
+            this.disableButton = true;
+        } else {
+            this.disableButton = null;
+        }
+    }
 
     submitComment() {
 
